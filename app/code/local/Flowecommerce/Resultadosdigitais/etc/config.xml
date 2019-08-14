@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Flowecommerce_Resultadosdigitais>
-            <version>0.1.6</version>
+            <version>0.1.7</version>
         </Flowecommerce_Resultadosdigitais>
     </modules>
     <global>
@@ -133,6 +133,8 @@
         <resultadosdigitais>
             <general>
                 <jsapurl>https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js</jsapurl>
+                <jsanalyticsurl>https://d335luupugsy2.cloudfront.net/js/loader-scripts/</jsanalyticsurl>
+                <enable_analytics>0</enable_analytics>
             </general>
         </resultadosdigitais>
     </default>

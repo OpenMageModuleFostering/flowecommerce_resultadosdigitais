@@ -108,7 +108,7 @@ class Flowecommerce_Resultadosdigitais_Model_Observer {
              * Dados da conta
              */
             $data = $this->_getRequestDataObject();
-            $data->setEmail($customer->getEmail());
+            $data->setEmail($order->getCustomerEmail());
             $data->setNome($customer->getName());
             $data->setAniversario($customer->getDob());
             $data->setGender($this->_getGenderLabel($customer->getGender()));
@@ -182,7 +182,7 @@ class Flowecommerce_Resultadosdigitais_Model_Observer {
             $this->_getApi()->addLeadConversion(self::LEAD_ORDERPLACE, $data);
 
             for ($i = 0; $i <=10; $i++) {
-                $response = $this->_getApi()->markSale($customer->getEmail(), $order_value);
+                $response = $this->_getApi()->markSale($order->getCustomerEmail(), $order_value);
                 if ($response) {
                     $statusResponse = $response->getHeader('Status');
                     if ($statusResponse == "200 OK") {

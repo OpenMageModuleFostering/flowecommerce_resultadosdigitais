@@ -20,6 +20,17 @@ class Flowecommerce_Resultadosdigitais_Block_Apijs extends Mage_Core_Block_Templ
         return $enabled && $isLoggedIn;
     }
 
+    public function getJsAnalyticsUrl() {
+        return $this->helper('resultadosdigitais')->getJsAnalyticsUrl();
+    }
 
+    public function getAnalyticsCode()
+    {
+        return $this->helper('resultadosdigitais')->getAnalyticsCode();
+    }
+
+    public function isAnalyticsEnabled() {
+        return $this->helper('resultadosdigitais')->isAnalyticsEnabled();
+    }
 
 }

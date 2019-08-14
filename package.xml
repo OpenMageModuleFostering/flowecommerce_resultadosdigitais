@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>flowecommerce_resultadosdigitais</name>
-    <version>0.1.6.3</version>
+    <version>0.1.7.1</version>
     <stability>stable</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -16,11 +16,11 @@ Uma nova conta de cliente &#xE9; criada&#xD;
 Um novo pedido &#xE9; criado&#xD;
 Um cliente assina a newsletter da loja virtual&#xD;
 Um produto &#xE9; adicionado ao carrinho quando o cliente est&#xE1; logado</description>
-    <notes>Atualizando vers&#xE3;o no config.xml</notes>
+    <notes>Liberando novas vers&#xF5;es do php para magento connect.</notes>
     <authors><author><name>Flow eCommerce</name><user>flowecommerce</user><email>contato@flowecommerce.com</email></author><author><name>Gabriel Queiroz Silva</name><user>gabrielqs</user><email>gabriel@flowecommerce.com</email></author></authors>
-    <date>2016-03-15</date>
-    <time>20:40:27</time>
-    <contents><target name="magelocal"><dir name="Flowecommerce"><dir name="Resultadosdigitais"><dir name="Block"><file name="Apijs.php" hash="c2e7219f6982976799e52f57a8ad7bbf"/><file name="Categoryview.php" hash="1451eca90c6db1c6404da530591db4cc"/><file name="Productview.php" hash="8907353a400c6ca016f93ab0c5ea4599"/></dir><dir name="Helper"><file name="Data.php" hash="09882c5456e06cecd6c185281596af56"/></dir><dir name="Model"><file name="Api.php" hash="ae2f7c8546ff93f7b18facdcb95552cc"/><dir name="Googleanalytics"><file name="Customvar.php" hash="d163ebb5bb590dd7553ed1356c033a2c"/><file name="Tracker.php" hash="be95e10bd1df9ca5319f5a50967f2eed"/><dir name="Utm"><file name="A.php" hash="7604206d87189c56f109231c4a95f00f"/><file name="B.php" hash="e710a66f3c061f4da69e9f468c2eaf5c"/><file name="C.php" hash="27c99ca82b05b11bcba01e88f9a3e5c6"/><file name="V.php" hash="9c77ced8175034ac42b89878e26844f5"/><file name="Z.php" hash="1bb0821f8752993b737a923fcbd4b314"/></dir></dir><file name="Observer.php" hash="ab9ee811fdd4055018f101788eec59b3"/><file name="Requestdata.php" hash="d97634793fae544f18e5ffda617ed745"/></dir><dir name="etc"><file name="adminhtml.xml" hash="be9b06eed9df502e9759b5cd397f9fa2"/><file name="config.xml" hash="c725e6fe7d591019b7caed35e9427e53"/><file name="system.xml" hash="da64ea97bc98fe6f42988df79c2ace1f"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Flowecommerce_Resultadosdigitais.xml" hash="5d476dea8a51bda77126fa637c5f29f2"/></dir></target></contents>
+    <date>2016-07-07</date>
+    <time>14:06:08</time>
+    <contents><target name="magelocal"><dir name="Flowecommerce"><dir name="Resultadosdigitais"><dir name="Block"><file name="Analytics.php" hash="d0fd4fb22e586ed3ece5138aacdd9b41"/><file name="Apijs.php" hash="c4dd321badb4adffcd06932f608052f9"/><file name="Categoryview.php" hash="1451eca90c6db1c6404da530591db4cc"/><file name="Productview.php" hash="8907353a400c6ca016f93ab0c5ea4599"/></dir><dir name="Helper"><file name="Data.php" hash="0cb21a44e5e63eba93b06eb8662aac6f"/></dir><dir name="Model"><file name="Api.php" hash="a118e5a2e9d7cd187f7023ff470657dd"/><dir name="Googleanalytics"><file name="Customvar.php" hash="d163ebb5bb590dd7553ed1356c033a2c"/><file name="Tracker.php" hash="be95e10bd1df9ca5319f5a50967f2eed"/><dir name="Utm"><file name="A.php" hash="7604206d87189c56f109231c4a95f00f"/><file name="B.php" hash="e710a66f3c061f4da69e9f468c2eaf5c"/><file name="C.php" hash="27c99ca82b05b11bcba01e88f9a3e5c6"/><file name="V.php" hash="9c77ced8175034ac42b89878e26844f5"/><file name="Z.php" hash="1bb0821f8752993b737a923fcbd4b314"/></dir></dir><file name="Observer.php" hash="1d3dccb1ac2d6aa50bdf64782a9852dd"/><file name="Requestdata.php" hash="d97634793fae544f18e5ffda617ed745"/></dir><dir name="etc"><file name="adminhtml.xml" hash="be9b06eed9df502e9759b5cd397f9fa2"/><file name="config.xml" hash="1305c68224a126dbc8c8e76a84954f62"/><file name="system.xml" hash="cef156839fcf94d68ff7875ac18cc708"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Flowecommerce_Resultadosdigitais.xml" hash="5d476dea8a51bda77126fa637c5f29f2"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="resultadosdigitais.xml" hash="b02aeff2e74c0743af145748b0d9caac"/></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.3.0</min><max>5.6.16</max></php></required></dependencies>
+    <dependencies><required><php><min>5.3.0</min><max>5.6.37</max></php></required></dependencies>
 </package>

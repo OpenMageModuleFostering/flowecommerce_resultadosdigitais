@@ -8,14 +8,19 @@ class Flowecommerce_Resultadosdigitais_Model_Observer {
     /**
      * Tipos de lead
      */
-    const LEAD_CONTACTFORM          = 'contact-form';
-    const LEAD_ORDERPLACE           = 'order-place';
-    const LEAD_ACCOUNTCREATE        = 'account-create';
-    const LEAD_NEWSLETTERSUBSCRIBE  = 'newsletter-subscribe';
-    const LEAD_NEWSLETTERUNSUBSCRIBE= 'newsletter-unsubscribe';
-    const LEAD_RECURRINGPAYMENT     = 'recurring-payment-subscription-processed';
-    const LEAD_RECURRINGPAYMENTPLANCHANGE    = 'recurring-payment-plan-change';
-    const LEAD_PRODUCTADDEDTOCART = 'product-added-to-cart';
+    const LEAD_CONTACTFORM                     = 'contact-form';
+    const LEAD_ORDERPLACE                      = 'order-place';
+    const LEAD_ACCOUNTCREATE                   = 'account-create';
+    const LEAD_NEWSLETTERSUBSCRIBE             = 'newsletter-subscribe';
+    const LEAD_NEWSLETTERUNSUBSCRIBE           = 'newsletter-unsubscribe';
+    const LEAD_RECURRINGPAYMENT                = 'recurring-payment-subscription-processed';
+    const LEAD_RECURRINGPAYMENTPLANCHANGE      = 'recurring-payment-plan-change';
+    const LEAD_RECURRINGPAYMENTPLANCANCELED    = 'recurring-payment-plan-canceled';
+    const LEAD_RECURRINGPAYMENTPLANREACTIVATED = 'recurring-payment-plan-reactivated';
+    const LEAD_PRODUCTADDEDTOCART              = 'product-added-to-cart';
+    const LEAD_PRODUCTVIEW                     = 'product-view';
+    const LEAD_CATEGORYVIEW                    = 'category-view';
+
     /**
      * Cliente tipo pessoa juridica - Compatibilidade com módulo PJ Flow
      */
@@ -62,9 +67,22 @@ class Flowecommerce_Resultadosdigitais_Model_Observer {
             $post = $data['controller_action']->getRequest()->getPost();
 
             $data = $this->_getRequestDataObject();
-            $data->setEmail($post['email']);
-            $data->setNome($post['name']);
-            $data->setTelefone($post['telephone']);
+
+            if (array_key_exists('email', $post)) {
+                $data->setEmail($post['email']);
+            }
+
+            if (array_key_exists('name', $post)) {
+                $data->setNome($post['name']);
+            }
+
+            if (array_key_exists('telephone', $post)) {
+                $data->setTelefone($post['telephone']);
+            }
+
+            if (array_key_exists('comment', $post)) {
+                $data->setMensagem($post['comment']);
+            }
 
             $data->setData('store_name', $this->_getStoreDataObject()->getName());
 
@@ -246,6 +264,26 @@ class Flowecommerce_Resultadosdigitais_Model_Observer {
             $data->setNewProductSku($observer->getNewSku());
             $data->setNewProductPrice($observer->getNewPrice());
             $this->_getApi()->addLeadConversion(self::LEAD_RECURRINGPAYMENTPLANCHANGE, $data);
+        }
+    }
+
+    public function recurringPaymentPlanCanceled(Varien_Event_Observer $observer)
+    {
+        if ($this->_getHelper()->isEnabled()) {
+            $data = $this->_getRequestDataObject();
+            $data->setEmail($observer->getEmail());
+            $data->setCanceledPlan($observer->getSku());
+            $this->_getApi()->addLeadConversion(self::LEAD_RECURRINGPAYMENTPLANCANCELED, $data);
+        }
+    }
+
+    public function recurringPaymentPlanReactivated(Varien_Event_Observer $observer)
+    {
+        if ($this->_getHelper()->isEnabled()) {
+            $data = $this->_getRequestDataObject();
+            $data->setEmail($observer->getEmail());
+            $data->setCanceledPlan($observer->getSku());
+            $this->_getApi()->addLeadConversion(self::LEAD_RECURRINGPAYMENTPLANREACTIVATED, $data);
         }
     }
 

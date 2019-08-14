@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>flowecommerce_resultadosdigitais</name>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <stability>stable</stability>
     <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -24,8 +24,8 @@ Uma nova conta de cliente &#xE9; criada&#xD;
 Um novo pedido &#xE9; criado&#xD;
 Um cliente assina a newsletter da loja virtual</notes>
     <authors><author><name>Flow eCommerce</name><user>flowecommerce</user><email>contato@flowecommerce.com</email></author><author><name>Gabriel Queiroz Silva</name><user>gabrielqs</user><email>gabriel@flowecommerce.com</email></author></authors>
-    <date>2014-12-05</date>
-    <time>11:37:31</time>
+    <date>2014-12-08</date>
+    <time>14:11:26</time>
     <contents><target name="magelocal"><dir name="Flowecommerce"><dir name="Resultadosdigitais"><dir name="Helper"><file name="Data.php" hash="00d2ae49825e162eb99dd72a98895a61"/></dir><dir name="Model"><file name="Api.php" hash="3d1f6c2f0406e79aa11245b46c9df874"/><dir name="Googleanalytics"><file name="Customvar.php" hash="d163ebb5bb590dd7553ed1356c033a2c"/><file name="Tracker.php" hash="be95e10bd1df9ca5319f5a50967f2eed"/><dir name="Utm"><file name="A.php" hash="7604206d87189c56f109231c4a95f00f"/><file name="B.php" hash="e710a66f3c061f4da69e9f468c2eaf5c"/><file name="C.php" hash="27c99ca82b05b11bcba01e88f9a3e5c6"/><file name="V.php" hash="9c77ced8175034ac42b89878e26844f5"/><file name="Z.php" hash="1bb0821f8752993b737a923fcbd4b314"/></dir></dir><file name="Observer.php" hash="3b502ffb66429c620b272d3e534ee6c7"/><file name="Requestdata.php" hash="d97634793fae544f18e5ffda617ed745"/></dir><dir name="etc"><file name="adminhtml.xml" hash="be9b06eed9df502e9759b5cd397f9fa2"/><file name="config.xml" hash="895bd2d9a76ff3bc31811dd2129c0b9f"/><file name="system.xml" hash="da64ea97bc98fe6f42988df79c2ace1f"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Flowecommerce_Resultadosdigitais.xml" hash="5d476dea8a51bda77126fa637c5f29f2"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.3.0</min><max>5.6.3</max></php></required></dependencies>

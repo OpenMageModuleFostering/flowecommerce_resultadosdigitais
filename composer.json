@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/flowecommerce_resultadosdigitais",
+    "name": "OpenMageModuleFostering\/flowecommerce_resultadosdigitais",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
-    "description": "Módulo de integração entre o magento e a plataforma RD Station da Resultados Digitais para criação e qualificação de leads.",
+    "description": "M\u00f3dulo de integra\u00e7\u00e3o entre o magento e a plataforma RD Station da Resultados Digitais para cria\u00e7\u00e3o e qualifica\u00e7\u00e3o de leads.",
     "authors": [
-    {
-        "name": "Flow eCommerce",
-        "email": "contato@flowecommerce.com"
-    }
-],
+        {
+            "name": "Flow eCommerce",
+            "email": "contato@flowecommerce.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
